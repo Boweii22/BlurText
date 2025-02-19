@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:background="@android:color/black"
+              android:padding="16dp">
+
+    <!-- Word or Letter Container -->
+    <LinearLayout
+            android:id="@+id/wordContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp" />
+
+    <SeekBar
+            android:id="@+id/speedSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="1000"
+            android:progress="390"
+            android:layout_marginTop="10dp" />
+
+    <!-- Speed Display -->
+    <TextView
+            android:id="@+id/speedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed: 390ms"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+
+    <!-- Toggle Floating Direction Button -->
+    <Button
+            android:id="@+id/toggleDirectionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle Direction"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"/>
+
+    <!-- Toggle Word/Letter Animation Mode -->
+    <Button
+            android:id="@+id/toggleModeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle Words/Letters"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"/>
+</LinearLayout>

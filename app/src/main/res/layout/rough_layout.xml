@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".MainActivity">
+
+
+    <TextView
+            android:id="@+id/tvSplit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Split Text"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="12dp" android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"/>
+
+    <FrameLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/text_bg"
+            android:layout_below="@id/tvSplit"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:id="@+id/frameLayout">
+
+        <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/tvCustomize"
+              android:text="Customize"
+              android:textSize="35sp"
+              android:layout_below="@id/frameLayout"
+              android:textStyle="bold"
+              android:textColor="@color/white"
+              android:fontFamily="serif"
+              android:layout_marginTop="12dp"
+              android:layout_marginStart="12dp"
+              android:layout_marginEnd="12dp"
+              android:layout_marginBottom="12dp"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbarLayout"
+            android:layout_below="@id/tvCustomize"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+        <!-- TextView for Delay Label -->
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delay \n (ms):"
+                android:textSize="22sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/white"
+                android:layout_marginEnd="8dp"/>
+
+        <!-- SeekBar for delay adjustment -->
+        <SeekBar
+                android:id="@+id/delaySeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:progressTint="@color/white"
+                android:thumbTint="@color/white"
+                android:progress="390"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+        <!-- TextView for displaying the progress value -->
+        <TextView
+                android:id="@+id/tvDelay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 ms"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/easeLayout"
+            android:layout_below="@id/seekbarLayout"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+        <!-- TextView for Delay Label -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Easing:"
+                android:textSize="22sp"
+                android:layout_gravity="center_vertical"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/white"
+                android:layout_marginEnd="8dp"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/easetext_bg"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+            <TextView
+                    android:id="@+id/easeStateCubic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="easeOutCubic"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
